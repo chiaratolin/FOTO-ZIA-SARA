@@ -13,13 +13,13 @@
 <meta property="og:title" content="Mary's Home Verona | Appartamento 90 m² tra Verona e il Lago di Garda" />
 <meta property="og:description" content="Appena ristrutturato, ampio e luminoso: 2 camere, balcone e parcheggio gratuito. Verona e il Lago di Garda a portata di mano." />
 <meta name="twitter:card" content="summary_large_image" />
-<!-- TODO: og:image, canonical e hreflang quando avremo foto e dominio -->
+<!-- TODO: og:image assoluta, canonical e hreflang quando avremo il dominio -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232e7466'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 
 <script type="application/ld+json">
 {
@@ -29,11 +29,13 @@
   "description": "Appartamento appena ristrutturato di 90 m² con 2 camere da letto, balcone e parcheggio gratuito, vicino all'uscita Verona Nord e a 10 km dal Lago di Garda.",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Via Gardesane 44",
     "addressLocality": "Verona",
     "addressRegion": "VR",
     "addressCountry": "IT"
   },
   "petsAllowed": false,
+  "occupancy": { "@type": "QuantitativeValue", "maxValue": 6 },
   "numberOfRooms": 2,
   "floorSize": { "@type": "QuantitativeValue", "value": 90, "unitCode": "MTK" },
   "amenityFeature": [
@@ -89,6 +91,7 @@
           <a class="btn btn-outline" href="#appartamento">Guarda l'appartamento</a>
         </div>
         <ul class="chips">
+          <li>Fino a 6 ospiti</li>
           <li>2 camere da letto</li>
           <li>Parcheggio gratuito</li>
           <li>Balcone</li>
@@ -96,12 +99,8 @@
         </ul>
       </div>
       <div class="hero-media">
-        <!-- TODO: sostituire con la foto più bella dell'appartamento -->
-        <div class="photo-placeholder" role="img" aria-label="Foto dell'appartamento in arrivo">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
-          Foto in arrivo
-        </div>
-        <div class="hero-tag">📍 Verona Nord</div>
+        <img src="images/camera-matrimoniale.jpg" alt="Camera matrimoniale con parete verde salvia e copriletto verde acqua" width="1400" height="932" />
+        <div class="hero-tag">📍 Via Gardesane 44, Verona</div>
       </div>
     </div>
   </section>
@@ -179,30 +178,45 @@
         <div class="car" id="photo-car">
           <button class="arrow prev" type="button" aria-label="Foto precedente">←</button>
           <div class="track" id="photo-track" tabindex="0" aria-label="Foto dell'appartamento">
-            <!-- TODO: sostituire ogni segnaposto con <img src="images/..." alt="..." /> -->
             <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
-              <figcaption>Camera matrimoniale</figcaption>
+              <img src="images/soggiorno-zona-pranzo.jpg" alt="Soggiorno luminoso con zona pranzo e TV" width="1400" height="932" loading="lazy" />
+              <figcaption>Soggiorno e zona pranzo</figcaption>
             </figure>
             <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
-              <figcaption>Camera con due letti singoli</figcaption>
-            </figure>
-            <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
+              <img src="images/soggiorno-divano.jpg" alt="Soggiorno con divano letto grigio e chaise longue" width="1400" height="932" loading="lazy" />
               <figcaption>Soggiorno con divano letto</figcaption>
             </figure>
             <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
+              <img src="images/cucina.jpg" alt="Cucina completa con frigorifero, forno e tavolo da pranzo" width="1400" height="932" loading="lazy" />
               <figcaption>Cucina</figcaption>
             </figure>
             <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
+              <img src="images/camera-matrimoniale.jpg" alt="Camera matrimoniale con letto large e parete verde salvia" width="1400" height="932" loading="lazy" />
+              <figcaption>Camera matrimoniale</figcaption>
+            </figure>
+            <figure class="photo-slide">
+              <img src="images/camera-matrimoniale-armadio.jpg" alt="Camera matrimoniale con grande armadio e specchio" width="1400" height="932" loading="lazy" />
+              <figcaption>Camera matrimoniale: armadio</figcaption>
+            </figure>
+            <figure class="photo-slide">
+              <img src="images/camera-letti-singoli.jpg" alt="Camera con due letti singoli in ferro battuto" width="1400" height="932" loading="lazy" />
+              <figcaption>Camera con due letti singoli</figcaption>
+            </figure>
+            <figure class="photo-slide">
+              <img src="images/soggiorno-scrivania.jpg" alt="Angolo scrivania nel soggiorno" width="1400" height="932" loading="lazy" />
+              <figcaption>Angolo scrivania</figcaption>
+            </figure>
+            <figure class="photo-slide">
+              <img src="images/ingresso-corridoio.jpg" alt="Ingresso e corridoio con porte in legno" width="1400" height="932" loading="lazy" />
+              <figcaption>Ingresso</figcaption>
+            </figure>
+            <figure class="photo-slide">
+              <img src="images/bagno.jpg" alt="Bagno con lavabo, bidet e finestra" width="1400" height="932" loading="lazy" />
               <figcaption>Bagno</figcaption>
             </figure>
             <figure class="photo-slide">
-              <div class="photo-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg> Foto in arrivo</div>
-              <figcaption>Balcone</figcaption>
+              <img src="images/doccia.jpg" alt="Box doccia con rivestimento color pesca" width="1400" height="1938" loading="lazy" />
+              <figcaption>Doccia</figcaption>
             </figure>
           </div>
           <button class="arrow next" type="button" aria-label="Foto successiva">→</button>
@@ -210,7 +224,7 @@
       </div>
       <div class="car-foot">
         <div class="dots" id="photo-dots"></div>
-        <span class="count" id="photo-count">1 / 6</span>
+        <span class="count" id="photo-count">1 / 10</span>
         <span class="swipe">Scorri per vedere le altre foto →</span>
       </div>
     </div>
@@ -253,10 +267,9 @@
       </div>
       <div class="location-grid">
         <div class="map-embed">
-          <!-- TODO: sostituire la ricerca con l'indirizzo esatto dell'appartamento -->
           <iframe
-            src="https://www.google.com/maps?q=Mary%27s+Home+Verona&output=embed"
-            title="Mappa di Mary's Home Verona"
+            src="https://www.google.com/maps?q=Via+Gardesane+44,+Verona&output=embed"
+            title="Mappa di Mary's Home Verona, Via Gardesane 44, Verona"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -444,7 +457,7 @@
             <option value="5 persone">5 persone</option>
             <option value="6 persone">6 persone</option>
           </select>
-          <p class="field-hint">Due camere (un matrimoniale e due singoli) più un divano letto in soggiorno.</p>
+          <p class="field-hint">L'appartamento ospita fino a 6 persone.</p>
           <p class="field-error" id="err-guests" role="alert" hidden></p>
         </div>
 
@@ -472,7 +485,7 @@
           Apri WhatsApp con la mia richiesta
         </button>
         <p class="booking-note">La richiesta <strong>non è ancora inviata</strong> finché non premi «Invia» su WhatsApp. Potrai rileggere il messaggio e cambiarlo.</p>
-        <p class="booking-alt">Preferisci parlare a voce? Chiama Ornella al <a data-tel-cta data-phone-label href="#">numero in arrivo</a></p>
+        <p class="booking-alt">Preferisci parlare a voce? Chiama Ornella al <a data-tel-cta href="#">+39 345 879 7005</a></p>
       </form>
     </div>
   </section>
@@ -488,16 +501,15 @@
         <a class="contact-card" data-tel-cta href="#">
           <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></div>
           <h3>Telefono</h3>
-          <p class="contact-value" data-phone-label>numero in arrivo</p>
+          <p class="contact-value">+39 345 879 7005</p>
           <p>Chiama per informazioni o disponibilità</p>
         </a>
         <a class="contact-card" data-whatsapp-cta href="#" target="_blank" rel="noopener">
           <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 1 1-15.8-4.4L3 21l4-2.2A8.5 8.5 0 0 1 21 11.5Z"/></svg></div>
           <h3>WhatsApp</h3>
-          <p class="contact-value" data-phone-label>numero in arrivo</p>
+          <p class="contact-value">+39 345 879 7005</p>
           <p>Risposta rapida, anche per soggiorni last minute</p>
         </a>
-        <!-- TODO: card email quando avremo l'indirizzo di Ornella -->
       </div>
     </div>
   </section>
@@ -522,8 +534,8 @@
     <div class="footer-grid">
       <div>
         <h4>Mary's Home Verona</h4>
-        <p>Appartamento di 90 m² a Verona Nord, a 10 km dal Lago di Garda.</p>
-        <!-- TODO: indirizzo completo e CIN -->
+        <p>Via Gardesane 44, Verona (VR) — a 10 km dal Lago di Garda.</p>
+        <p>CIN: IT023091C2SUY7KV08<br />CIR: 023091-LOC-09044</p>
       </div>
       <div>
         <h4>Link utili</h4>
@@ -537,7 +549,8 @@
       </div>
       <div>
         <h4>Host</h4>
-        <p>Ornella</p>
+        <p>Ornella<br />
+        Via Gardesane 44, Verona (VR)</p>
       </div>
     </div>
     <div class="footer-legal">

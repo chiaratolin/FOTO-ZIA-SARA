@@ -1,15 +1,11 @@
 (function () {
   "use strict";
 
-  // TODO: inserire il numero di Ornella (solo cifre con prefisso, es. "393401234567").
-  // Finché è vuoto, WhatsApp si apre con il messaggio pronto e lascia scegliere il contatto.
-  var WHATSAPP_NUMBER = "";
+  var WHATSAPP_NUMBER = "393458797005";
 
-  // TODO: stesso numero in formato internazionale, es. "+393401234567".
-  var PHONE_NUMBER = "";
+  var PHONE_NUMBER = "+393458797005";
 
-  // Come mostrare il numero sul sito, es. "+39 340 123 4567".
-  var PHONE_LABEL = "";
+  var PHONE_LABEL = "+39 345 879 7005";
 
   var lang = document.documentElement.lang === "en" ? "en" : "it";
 

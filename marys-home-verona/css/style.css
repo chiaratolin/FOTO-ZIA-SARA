@@ -2,38 +2,43 @@
    Stessa base grafica di Sara's Holiday Home (gradienti morbidi, bottoni
    pillola con ombra colorata, tag script, numeri "ghost", cerchi orb).
 
-   PALETTE PROVVISORIA ("pietra di Verona & salvia"): verra' sostituita con
-   i colori ricavati dalle foto dell'appartamento. Per cambiarla basta
-   modificare i token qui sotto: tutto il resto del CSS li usa. */
+   Palette ricavata dalle foto dell'appartamento:
+   - verde acqua del copriletto della camera matrimoniale  -> accento (#2e7466)
+   - verde salvia della parete dietro il letto             -> toni morbidi (#a9c5a0)
+   - legno ciliegio di testiera, comodini e porte          -> accento caldo (#8d3c0b)
+   - pareti crema e pavimento in gres color pesca          -> sfondi (#fcf8f1, #f5e9d8)
+   Per cambiarla basta modificare i token qui sotto. */
 
 :root {
-  --color-bg: #f8f6f1;
-  --color-bg-alt: #eeeae0;
+  --color-bg: #fcf8f1;
+  --color-bg-alt: #f5e9d8;
   --color-surface: #ffffff;
-  --color-text: #26302a;
-  --color-text-soft: #5d665f;
-  --color-accent: #5f7a63;
-  --color-accent-2: #7d977f;
-  --color-accent-dark: #3f5444;
-  --color-accent-soft: #e3ebe2;
-  --color-border: #dfdcd0;
+  --color-text: #22312d;
+  --color-text-soft: #5a625c;
+  --color-accent: #2e7466;
+  --color-accent-2: #4a9384;
+  --color-accent-dark: #1f5249;
+  --color-accent-soft: #dcebe3;
+  --color-wood: #8d3c0b;
+  --color-sage: #a9c5a0;
+  --color-border: #eadfce;
 
   /* versioni RGB per ombre e trasparenze */
-  --accent-rgb: 95, 122, 99;
-  --accent-deep-rgb: 47, 64, 51;
-  --bg-rgb: 248, 246, 241;
+  --accent-rgb: 46, 116, 102;
+  --accent-deep-rgb: 22, 60, 53;
+  --bg-rgb: 252, 248, 241;
 
-  --hero-from: #fbfaf6;
-  --hero-to: #e8ece2;
-  --footer-text: #dfe3da;
-  --footer-muted: #b5bdb2;
-  --footer-highlight: #c9d9b8;
-  --input-border: #c9c8bb;
+  --hero-from: #fefbf5;
+  --hero-to: #e3eedf;
+  --footer-text: #dfe8e3;
+  --footer-muted: #aebdb6;
+  --footer-highlight: #f0c9a0;
+  --input-border: #d6c7b2;
 
-  --grad-accent: linear-gradient(135deg, #7d977f 0%, #5f7a63 100%);
-  --grad-card: linear-gradient(145deg, #f3f1ea 0%, #e2e5d8 100%);
-  --grad-card-strong: linear-gradient(145deg, #9ab29b 0%, #6a856d 100%);
-  --grad-card-deep: linear-gradient(145deg, #5f7a63 0%, #2f4033 100%);
+  --grad-accent: linear-gradient(135deg, #4a9384 0%, #2e7466 100%);
+  --grad-card: linear-gradient(145deg, #fbf3e7 0%, #f0dfc8 100%);
+  --grad-card-strong: linear-gradient(145deg, #b8d2b0 0%, #7fa48a 100%);
+  --grad-card-deep: linear-gradient(145deg, #2e7466 0%, #163c35 100%);
 
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -1210,26 +1215,6 @@ body { padding-bottom: 76px; }
   font-size: 3.4rem;
 }
 
-/* Segnaposto foto: sparisce quando inseriamo le immagini vere */
-.photo-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--grad-card);
-  color: var(--color-accent-dark);
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-.photo-placeholder svg { opacity: 0.6; }
-.hero-media .photo-placeholder { aspect-ratio: 4/5; height: 100%; }
-@media (min-width: 900px) {
-  .hero-media .photo-placeholder { aspect-ratio: 3/4; }
-}
-
 /* Dintorni: liste raggruppate */
 .nearby-grid {
   display: grid;
@@ -1297,3 +1282,7 @@ body { padding-bottom: 76px; }
   font-style: italic;
 }
 .host-card .host-langs { font-size: 0.9rem; margin: 0; }
+
+/* Accento caldo "legno ciliegio" sui titoletti script */
+.section-header .eyebrow,
+.hero-copy .script-tag { color: var(--color-wood); }
