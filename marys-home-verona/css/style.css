@@ -1502,3 +1502,43 @@ h3 { font-size: 1.25rem; font-weight: 400; }
 .spaces-list li { justify-content: flex-start; text-align: left; }
 .booking-steps li { border-radius: var(--radius-md); }
 .photo-slide img { height: auto; }
+
+/* Logo acquerello */
+.brand .brand-mark { background: #f6efe2; overflow: hidden; }
+.brand .brand-mark img { transform: scale(1.35); }
+.hero-card-logo {
+  width: 104px;
+  height: 104px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin: 0 0 18px;
+  box-shadow: 0 10px 24px -14px rgba(var(--accent-deep-rgb), 0.6);
+}
+.final-logo {
+  width: 168px;
+  height: 168px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  box-shadow: 0 16px 30px -18px rgba(var(--accent-deep-rgb), 0.55);
+}
+.footer-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+.footer-logo { margin: 0 auto 14px; }
+.final-cta .eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-wood);
+  margin-bottom: 10px;
+}
+@media (min-width: 640px) {
+  .contact-cards { grid-template-columns: repeat(2, minmax(0, 280px)); justify-content: center; }
+}
