@@ -1543,3 +1543,15 @@ h3 { font-size: 1.25rem; font-weight: 400; }
   .contact-cards { grid-template-columns: repeat(2, minmax(0, 280px)); justify-content: center; }
 }
 .nearby-card li strong { color: var(--color-accent-dark); font-weight: 600; }
+.longstay-kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+}
+.longstay p { max-width: 760px; }
