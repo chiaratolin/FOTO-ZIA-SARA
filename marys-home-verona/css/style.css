@@ -40,15 +40,15 @@
   --grad-card-strong: linear-gradient(145deg, #b8d2b0 0%, #7fa48a 100%);
   --grad-card-deep: linear-gradient(145deg, #2e7466 0%, #163c35 100%);
 
-  --radius-lg: 24px;
-  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
   --radius-sm: 10px;
   --shadow-soft: 0 12px 32px -12px rgba(43, 35, 32, 0.18);
   --shadow-accent: 0 14px 28px -8px rgba(var(--accent-rgb), 0.4);
   --container: 1120px;
-  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-script: "Caveat", "Segoe Script", cursive;
-  --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-script: "DM Serif Display", Georgia, serif;
+  --font-body: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -1286,3 +1286,219 @@ body { padding-bottom: 76px; }
 /* Accento caldo "legno ciliegio" sui titoletti script */
 .section-header .eyebrow,
 .hero-copy .script-tag { color: var(--color-wood); }
+
+
+/* =====================================================================
+   IDENTITÀ MARY'S HOME
+   Strato che dà alla landing un carattere proprio rispetto a Sara:
+   serif elegante + sans geometrico, titoli allineati a sinistra su
+   desktop, hero a tutta foto, bottoni squadrati, numeri in fascia,
+   card numerate con filo in legno ciliegio.
+   ===================================================================== */
+
+h1, h2, h3, h4 { font-weight: 400; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.3rem, 6vw, 3.9rem); line-height: 1.05; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 400; }
+h3 { font-size: 1.25rem; font-weight: 400; }
+.section { padding: 76px 0; }
+
+/* Titoletti: maiuscoletto con filo, al posto del corsivo script */
+.section-header .eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-wood);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.section-header .eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--color-wood);
+}
+@media (min-width: 900px) {
+  .section-header { text-align: left; margin-left: 0; max-width: 760px; }
+}
+
+/* Bottoni squadrati, ombra discreta */
+.btn { border-radius: 12px; padding: 15px 24px; letter-spacing: 0.01em; }
+.btn-primary { background: var(--color-accent); box-shadow: 0 8px 18px -10px rgba(var(--accent-deep-rgb), 0.7); }
+.btn-primary:hover { background: var(--color-accent-dark); box-shadow: 0 10px 22px -10px rgba(var(--accent-deep-rgb), 0.8); }
+.btn-outline { border-width: 1.5px; }
+.brand .brand-mark { border-radius: 10px; background: var(--color-accent); box-shadow: none; }
+.brand { font-family: var(--font-heading); font-weight: 400; font-size: 1.2rem; }
+
+/* Hero a tutta foto */
+.hero.hero-photo {
+  position: relative;
+  padding: 0;
+  min-height: min(88vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  background: var(--color-text);
+  overflow: hidden;
+}
+.hero-photo .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(22,60,53,0.05) 0%, rgba(22,60,53,0.15) 45%, rgba(22,60,53,0.55) 100%);
+}
+.hero-photo .container { position: relative; z-index: 1; padding-top: 140px; padding-bottom: 72px; }
+.hero-card {
+  background: rgba(var(--bg-rgb), 0.96);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px 26px;
+  max-width: 600px;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.45);
+  text-align: left;
+  border-top: 4px solid var(--color-wood);
+}
+@media (min-width: 900px) {
+  .hero-photo { align-items: center; }
+  .hero-photo .container { padding-top: 80px; padding-bottom: 110px; }
+  .hero-card { padding: 42px 44px 36px; }
+}
+.hero-card .kicker {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-wood);
+  margin-bottom: 14px;
+}
+.hero-card h1 { margin-bottom: 16px; }
+.hero-card .lead { font-size: 1.05rem; margin-bottom: 24px; }
+.hero-card .hero-cta { justify-content: flex-start; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.hero-card .chips { justify-content: flex-start; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.hero-card .chips li { background: var(--color-accent-soft); border: 0; color: var(--color-accent-dark); border-radius: 8px; }
+
+/* Fascia numeri */
+.stats-band {
+  position: relative;
+  z-index: 2;
+  margin-top: -48px;
+}
+.stats {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--grad-card-deep);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 50px -28px rgba(var(--accent-deep-rgb), 0.9);
+  overflow: hidden;
+}
+.stats li {
+  padding: 18px 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.stats li:last-child { grid-column: 1 / -1; }
+.stats b { font-family: var(--font-heading); font-weight: 400; font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1; }
+.stats span { font-size: 0.82rem; opacity: 0.85; }
+@media (min-width: 760px) {
+  .stats { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .stats li:last-child { grid-column: auto; }
+  .stats li + li { border-left: 1px solid rgba(255,255,255,0.18); }
+}
+
+/* Card "perché" numerate, allineate a sinistra */
+.feature-card {
+  position: relative;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-wood);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  padding: 26px 22px;
+}
+.feature-card .feature-icon { margin: 0 0 18px; border-radius: 10px; box-shadow: none; background: var(--color-accent-soft); color: var(--color-accent-dark); }
+.feature-card .card-num {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--color-bg-alt);
+}
+.feature-icon { border-radius: 10px; box-shadow: none; }
+
+/* Elementi con angoli più asciutti */
+.amenity, .faq-item, .nearby-card, .rule, .contact-card { border-radius: var(--radius-md); box-shadow: none; }
+.amenity { text-align: left; justify-content: flex-start; }
+
+/* Percorso "posizione strategica" */
+.route {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr);
+  counter-reset: none;
+}
+.route-stop {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  text-align: left;
+}
+.route-stop b { font-family: var(--font-heading); font-weight: 400; font-size: 1.15rem; color: var(--color-text); }
+.route-stop span { font-size: 0.9rem; color: var(--color-text-soft); white-space: nowrap; }
+.route-stop.home { background: var(--color-accent); border-color: var(--color-accent); }
+.route-stop.home b, .route-stop.home span { color: #fff; }
+@media (min-width: 900px) {
+  .route { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+  .route-stop { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .route-stop + .route-stop::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    width: 28px;
+    border-top: 2px dashed var(--color-wood);
+  }
+}
+
+.list-title { font-size: 1.25rem; text-align: left; margin-bottom: 8px; }
+.distance-list li { text-align: left; }
+.nearby-card.parks { border-top: 3px solid var(--color-wood); }
+
+/* Fascia CTA e final CTA più asciutte */
+.longstay { border-radius: var(--radius-lg); box-shadow: none; text-align: left; padding: 44px 32px; }
+.longstay p { margin-left: 0; }
+.final-cta { box-shadow: none; }
+.distance-list li { flex-direction: row; justify-content: space-between; align-items: baseline; gap: 12px; }
+.distance-list li span { white-space: nowrap; }
+.apartment-grid > div:first-child { text-align: left; }
+.spaces-list li { justify-content: flex-start; text-align: left; }
+.booking-steps li { border-radius: var(--radius-md); }
+.photo-slide img { height: auto; }
