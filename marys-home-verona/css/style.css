@@ -1555,3 +1555,14 @@ h3 { font-size: 1.25rem; font-weight: 400; }
   margin-bottom: 14px;
 }
 .longstay p { max-width: 760px; }
+
+/* Five feature cards: 3 + 2 centred on wide screens */
+@media (min-width: 700px) and (max-width: 1023px) {
+  .features-grid > .feature-card:nth-child(5) { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+  .features-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .features-grid > .feature-card { grid-column: span 2; }
+  .features-grid > .feature-card:nth-child(4) { grid-column: 2 / 4; }
+  .features-grid > .feature-card:nth-child(5) { grid-column: 4 / 6; }
+}
