@@ -1542,3 +1542,4 @@ h3 { font-size: 1.25rem; font-weight: 400; }
 @media (min-width: 640px) {
   .contact-cards { grid-template-columns: repeat(2, minmax(0, 280px)); justify-content: center; }
 }
+.nearby-card li strong { color: var(--color-accent-dark); font-weight: 600; }
