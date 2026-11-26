@@ -8,8 +8,8 @@
   var lang = document.documentElement.lang === "en" ? "en" : "it";
 
   var DEFAULT_MESSAGE = {
-    it: "Ciao! Vorrei un preventivo per Sara's Holiday Home.",
-    en: "Hi! I'd like a quote for Sara's Holiday Home.",
+    it: "Ciao! Vorrei un preventivo per Sara's Hospitality.",
+    en: "Hi! I'd like a quote for Sara's Hospitality.",
   };
 
   function buildWhatsAppUrl(message) {
@@ -178,7 +178,7 @@
       var notes = notesEl.value.trim();
 
       var message = [
-        "Ciao Sara! Vorrei richiedere la disponibilità per Sara's Holiday Home.",
+        "Ciao Sara! Vorrei richiedere la disponibilità per Sara's Hospitality.",
         "",
         "Nome: " + name,
         "Ospiti: " + guests,
